@@ -19,7 +19,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-	
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
 	<!-- <link rel="preload" href="KrutiDev170Italic.woff2" as="font" type="font/woff2" crossorigin> -->
 
 <style>
@@ -684,7 +685,11 @@
 								<input type="checkbox" class="form-check-input" id="privacyPolicy" required>
 								<label class="form-check-label" for="privacyPolicy">I agree to the <a href="#" target="_blank">privacy policy</a></label>
 							</div>
-							<button type="submit" class="btn button">Send Application</button>
+							<!-- <button type="submit" class="btn button">Send Application</button> -->
+							<button class="g-recaptcha" 
+        data-sitekey="6Ld3Eu4pAAAAAO4b-qSvApBt4TTqOw3C9Xygxivj" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
 						</form>
 					</div>
 					<div class="col-md-1"></div>
@@ -758,6 +763,11 @@
 	<script src="js/custom.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 	<script src="https://bfintal.github.io/Counter-Up/jquery.counterup.min.js"></script>
+	<script>
+		function onSubmit(token) {
+		  document.getElementById("demo-form").submit();
+		}
+	  </script>
 	<script>
 		$('#carouselExampleCaptions').carousel({
   interval: 3000,
