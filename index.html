@@ -19,7 +19,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 	<!-- <link rel="preload" href="KrutiDev170Italic.woff2" as="font" type="font/woff2" crossorigin> -->
 
@@ -685,11 +685,13 @@
 								<input type="checkbox" class="form-check-input" id="privacyPolicy" required>
 								<label class="form-check-label" for="privacyPolicy">I agree to the <a href="#" target="_blank">privacy policy</a></label>
 							</div>
-							<!-- <button type="submit" class="btn button">Send Application</button> -->
-							<button class="g-recaptcha" 
+							<div class="g-recaptcha" data-sitekey="6LdmF-4pAAAAAMvLkIwwnWAwbZhW2ncY1z2HVRxt"></div>
+      <br/>
+							<button type="submit" class="btn button">Send Application</button>
+							<!-- <button class="g-recaptcha" 
         data-sitekey="6LfAFe4pAAAAAJNeDxvDFjFAjELr1mBN11ALLXGY" 
         data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+        data-action='submit'>Submit</button> -->
 						</form>
 					</div>
 					<div class="col-md-1"></div>
